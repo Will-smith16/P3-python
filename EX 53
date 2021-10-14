@@ -1,0 +1,10 @@
+a = int(input(""))
+b = int(input(""))
+c = int(input(""))
+print("la fonction f(x) est + " , a, "x2, +", b, "x +",c)
+if delta < 0:
+    print(" L'équation n'a pas de solution")
+if delta == 0:
+    resultl = -b/2*a
+    print(resultl)
+if delta > 0  
