@@ -1,0 +1,29 @@
+a = int(input(" Premier nombre"))
+b = int(input(" Second nombre"))
+c = int(input(" Troisième nombre"))
+liste = []
+if a<b and a<c:
+    liste.append(a)
+    if b<c:
+        liste.append(b)
+        liste.append(c)
+    else:
+        liste.append(c)
+        liste.append(b)
+if b<a and b<c:
+    liste.append(b)
+    if a<c:
+        liste.append(a)
+        liste.append(c)
+    else:
+        liste.append(c)
+        liste.append(a)
+if c<a and c<b:
+    liste.append(c)
+    if a<b:
+        liste.append(a)
+        liste.append(b)
+    else:
+        liste.append(b)
+        liste.append(a)
+print(liste)
