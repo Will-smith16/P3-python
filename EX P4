@@ -82,12 +82,17 @@ for i in range(3):
     
 #2
     
-def fig2(n):
-    begin_fill
+from turtle import *
+def triangle(n):
+    begin_fill()
     for i in range(3):
         left(120)
         forward(n)
-    for i in range(4):
-        left(120)
-        forward(n/2)
-fig2(150)
+    left(120)
+    end_fill()
+for i in range(3):
+    triangle(100)
+up()
+goto(150,0)
+down()
+    
