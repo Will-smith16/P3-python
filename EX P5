@@ -1,1 +1,12 @@
+#EX 71:
 
+t = [0]*100
+for i in range (100) :
+    t[i ] = i **2
+print (" taille du tableau :", len (t) )
+for i in range (100) :
+    print (" Valeur d’indice ", i , ":", t[ i ])
+    
+    
+    
+#EX 72:   
