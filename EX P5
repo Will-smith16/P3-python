@@ -30,3 +30,30 @@ for i in range (1,11) :
 print (" taille du tableau :", len (t) )
 for i in range (1000) :
     print (" Valeur d’indice ", i , ":", t[ i ])
+    
+    
+    
+    
+    
+#EX 74:
+
+nterms = int(input("Entrez un nombre: "))
+ 
+n1 = 0
+n2 = 1
+ 
+print("\n la suite fibonacci est :")
+print(n1, ",", n2, end=", ")
+ 
+for i in range(2, nterms):
+  suivant = n1 + n2
+  print(suivant, end=", ")
+ 
+  n1 = n2
+  n2 = suivant
+
+
+
+
+
+
