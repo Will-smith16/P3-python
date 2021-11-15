@@ -138,14 +138,16 @@ prefixe([5, 8, 9, 10], [5, 8, 9, 10])
 #EX 86
 
 def suffixe(tab1, tab2):
-    s = 0
+    s = 1
     acc = 0
-    r1 = len(tab)-1
+    r1 = len(tab)-3
     r2 = len (tab1)
-    print(r1, r2)s
-    for i in range (r1, r2):
+    #print(r1, r2)
+    for i in range(r1, r2):
         if tab[i] == tab2[s]:
             acc +=1
+            #print(i, s, acc)
+            print(tab[i], tab2[s])
         s+=1
     if acc == 3:
         return True
