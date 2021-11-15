@@ -52,7 +52,106 @@ for i in range(2, nterms):
   n1 = n2
   n2 = suivant
 
+from random import *
 
+#EX 80
+
+def echange (tab, k, j):
+    tab = [k,j]
+    change = j
+    for i in range(len(tab)):
+        tab[i] = test
+        change = k      
+    print(tab)
+echange([],75, 67)
+
+#EX 81
+
+def somme(tab):
+    acc = 0
+    for i in range(len(tab)):
+        acc += tab[i]
+    print(acc)
+    
+    def moyenne(tab):
+        nid = (somme(tab)/ len(tab))
+        print("La moyenne du tableau est ", nid)
+    somme([13, 17, 30])
+    
+moyenne([13, 17, 30])
+
+#EX 82
+
+def produit(tab):
+    acc = 1
+    if len(tab) == 0:
+        return 0
+    for i in range(len(tab)):
+        acc += tab[i]
+    print(acc)
+produit([])
+
+
+#EX 83
+
+def miroir(tab):
+    test = len(tab)
+    if test%2!=1:
+        test=3
+    for i in range(test):
+        if len(tab)%2 == 0:
+            change = tab[test]
+            tab[test] = tab[i]
+            tab[i] = change
+            test -= 1
+            print(tab)
+        else:
+            pass
+        
+
+miroir([6, 8, 2, 4])
+
+#EX 84
+
+def melange(tab):
+    for i in range(len(tab)):
+        new = randit(0, i+1)
+        tab[new] = tab[i]
+    print(tab)
+melange([8, 10, 14])    
+
+#EX 85
+
+def prefixe(tab1, tab2):
+    s = 0
+    acc = 0
+    for i in range(0, 3):
+        if tab[i] == tab2[s]:
+            acc +=1
+        s+=1
+    if acc == 3:
+        return True
+    else:
+        return False
+prefixe([5, 8, 9, 10], [5, 8, 9, 10])
+
+#EX 86
+
+def suffixe(tab1, tab2):
+    s = 0
+    acc = 0
+    r1 = len(tab)-1
+    r2 = len (tab1)
+    print(r1, r2)s
+    for i in range (r1, r2):
+        if tab[i] == tab2[s]:
+            acc +=1
+        s+=1
+    if acc == 3:
+        return True
+    else:
+        return False
+suffixe([3, 4, 5, 6], [3, 4, 5, 6])
 
 
 
