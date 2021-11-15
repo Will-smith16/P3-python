@@ -156,5 +156,17 @@ def suffixe(tab1, tab2):
 suffixe([3, 4, 5, 6], [3, 4, 5, 6])
 
 
+#EX 87
+
+def hamming(tab1, tab2):
+    acc = 0
+    for i in range(3):
+        if tab1[i]!=tab2[i]:
+            acc+=1
+        print(tab1[i], tab2[i]
+        return acc
+hamming([3, 7], [3, 4])
+
+
 
 
