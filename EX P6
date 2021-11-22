@@ -1,0 +1,169 @@
+# EX 90
+
+def digits(n):
+    x=0
+    d=0
+    while n>=x:
+        if x==0:
+            x=1
+        d=d+1
+        x=x*10
+    return d
+print(digits(7))
+
+
+# EX 91
+
+x= int(input("nombre"))
+while x!=1:
+    
+    if x %2==0:
+        x=x//2
+    else:
+        
+        x=x*3+1
+    print (x)
+    
+    
+#EX 92
+
+x= int(input("nombre"))
+c=0
+b=0
+while x!=1:
+    if x %2==0:
+        x=x//2
+    else:
+        x=x*3+1
+    if x>b:
+        b=x
+    c=c+1
+    print (x)
+print ("nombre plus grand",b)
+print ("nombre detapes",c)
+
+
+# EX 93
+
+C=0
+B=0
+V=0
+N=0
+M=0
+for i in range (1,20):
+    c=0
+    x=i
+    b=0
+    while x!=1:
+        if x %2==0:
+            x=x//2
+        else:
+            x=x*3+1
+        if x>b:
+            b=x
+        c=c+1
+    if c>C:
+        C=c
+        V=i
+    if b>B:
+        B=b
+        N=i
+    if i!=1:
+        if c==B:
+            M=i
+    print ("nombre detapes pour",i,":",c,"nombre max:",b)
+print("le nomre avec les plus grand maximum",N)
+if M==0:
+    print("le nomre avec les plus detapes est",V)
+else:
+    print("le nomres avec les plus detapes sont",V,"et",M)
+    
+    
+# EX 94
+
+x=0
+y=1
+f=0
+print (x)
+print (y)
+while f<1000:
+    f=x+y
+    x=y
+    y=f
+    if f<1000:
+        print (f)
+        
+# EX 95
+
+def dia(a,b,tab):
+    for i in range (len(tab)):
+        if tab[i]==a and tab[i+1]==b:
+            return True
+    return False
+t=[1,2,3,4,5,6,7,8,9,10]
+print (dia(1,2,t))
+
+
+# EX 96
+
+def sousmot(a,b,tab):
+    y=0
+    x=0
+    for i in range (len(tab)):
+        if tab[i]==a :
+            x=i
+        if tab[i]==b:
+            y=i
+        if y>x:
+            return True
+        return False
+t=[1,2,3,4,5,6,7,8,9,10]
+print (sousmot(1,2,t))
+
+
+# EX 97
+
+t1=[1,5,6]
+t2=[1,2,3,4,6,5,7,8,9,10]
+x=0
+def sousmot(t1,t2):
+    for i in range (len(t1)):
+        x=i
+        while t1[i]!=t2[x]:
+            x=x+1
+        t1[i]=x
+    for i in range (len(t1)-1):
+        if t1[i]>t1[i+1]:
+            return False
+        return True
+print (sousmot(t1,t2))
+        
+        
+# EX 108
+
+from random import*
+a=21
+while a>0:
+    if a>3:
+        y=randint(1,3)
+    if a >3:
+        y = randint (1,2)
+    if a==1:
+        print ("vous avez gagné")
+        break
+    print ("l'ordinaeur enleve",y,"allumetes")
+    a=a-y
+    if a==1:
+        print ("vous avez perdu")
+        break
+    print("il reste a",a,"allumetes" )
+    x=int(input("enlevez combien d'allumetes"))
+    if x>3:
+        print ("kill yourself")
+        break
+    a=a-x
+    print("il reste",a,"allumetes")
+
+
+    
+    
