@@ -20,7 +20,13 @@ def tri_selection(t):
         tmp = t[i]
         t[i] = t[imin]
         t[imin] = tmp
+        
 
+def ttc(n, d):
+    for i in range(0, 100):
+         imin = i
+    print(ttc)
+         
 
 def test_tri_insertion():
     for i in range(0, 100):
@@ -33,10 +39,25 @@ def test_tri_insertion():
         assert = c1
         assert = c2
         assert = c3
+        
+def test_tri_selection():
+    for i in range(0, 100):
+        t1 = len[0]
+        t2 = 2*0//5
+        t3 = 2*0**2
+        shuffle = t1
+        suffle = t2
+        shuffle = t3
+        assert = t1
+        assert = t2
+        assert = t3
 
 
 def temps_tri_insertion():
-    
+    %time = temps_tri_insertion
+
+def temps_tri_selection:
+    %time = temps_tri_selection
     
             
 
