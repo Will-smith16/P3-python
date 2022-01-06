@@ -1,63 +1,72 @@
-from random import *
+from random import*
+from time import perf_counter
+t=[5,3,6,4,5,7,3,7,87,54,3,7,34,6,2,56,4,6]
 
+n=0
 def tri_insertion(t):
-    for k in range(1,len(t)):
-        temp=t[k]
-        j=k
-        while j>0 and temp<t[j-1]:
+    i=1
+    for i in range (len(t)):
+        x=t[i]
+        j=i
+        while j>0 and x<t[j-1]:
             t[j]=t[j-1]
-            j-=1
-        t[j]=temp
+            j=j-1
+        t[j]=x
+  
+n=0
+def tri_selection(t):
+    min=0
+    imin=0
+    j=0
+    for i in range(len(t)):
+        min=t[i]
+        imin=i
+        j=i
+        for j in range (j,len(t)):
+            if t[j]<min:
+                min=t[j]
+                imin=j
+        x=t[i]
+        t[i]=t[imin]
+        t[imin]=x
+
+def ttc(n,d):
+    t=[0]*n
+    for i in range (n-1):
+        t[i+1]=t[i]+randint(0,d)
     return t
 
+def copie(t):
+    c=0*len(t)
+    for i in range (len(t)):
+        c[i]=t[i]
+    return c
 
-def tri_selection(t):
-    for i in range(len(t)-1):
-        imin = i
-        for j in range(i + 1, len(t)):
-            if t[j]<t[imin]:
-                imin = j
-        tmp = t[i]
-        t[i] = t[imin]
-        t[imin] = tmp
-        
-
-def ttc(n, d):
-    for i in range(0, 100):
-         imin = i
-    print(ttc)
-         
-
-def test_tri_insertion():
-    for i in range(0, 100):
-        t1 = len[0]
-        t2 = 2*0//5
-        t3 = 2*0**2
-        c1 = t1
-        c2 = t2
-        c3 = t3
-        assert = c1
-        assert = c2
-        assert = c3
-        
 def test_tri_selection():
-    for i in range(0, 100):
-        t1 = len[0]
-        t2 = 2*0//5
-        t3 = 2*0**2
-        shuffle = t1
-        suffle = t2
-        shuffle = t3
-        assert = t1
-        assert = t2
-        assert = t3
-
-
-def temps_tri_insertion():
-    %time = temps_tri_insertion
-
-def temps_tri_selection:
-    %time = temps_tri_selection
+    for n in range (100):
+        t1=ttc(n,0)
+        t2=ttc(n,n//5)
+        t3=ttc(n,5*n**2)
+        c1,c2,c3=copie(t1),copie (t2),copie(t3)
+        shuffle(t1)
+        shuffle(t2)
+        shuffle(t3)
+        tri_selection(t1)
+        tri_selection(t2)
+        tri_selection(t3)
+        assert t1==c1
+        assert t2==c2
+        assert t3==c3
+        print("Tout va bien")
+        
+def temps_tri_insertion(n):
+    start=perf_counter()
+    tri_insertion(t)
+    end=perf_counter()
+    print("tps tri insertion",end-start)
     
-            
-
+def temps_tri_selection(n):
+    start=perf_counter()
+    tri_selection(t)
+    end=perf_counter()
+    print("tps tri selection",end-start)
