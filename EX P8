@@ -1,0 +1,75 @@
+from turtle import*
+
+# EX 121
+
+t = [i % 3 for i in range(100)]
+print(t)
+# Ce programme affiche une infinité de 0, 1, 2 successivement.
+
+# EX 122
+
+grille = []
+for i in range(11):
+    ligne = []
+    for j in range(m)
+        ligne.append(f(i, j))
+    grille.append(ligne)
+
+# EX 123
+
+grille = []
+for i in range(8):
+    ligne = [0]*8
+    grille.append(ligne)
+print(grille)
+
+# EX 124
+
+grille = []
+for i in range(64):
+    ligne = [8]*8
+    grille.append(ligne)
+print(grille)
+
+# EX 125
+
+grille = []
+for i in range(30*30):
+    ligne = [1, 9999]
+    grille.append(ligne)
+print(grille)
+
+# EX 129
+
+begin_fill()
+for i in range(4):
+    forward(100)
+    left(90)
+end_fill()
+right(90)
+begin_fill()
+for i in range(4):
+    forward(100)
+    right(90)
+end_fill()
+left(180)
+forward(100)
+begin_fill()
+for i in range(4):
+    forward(100)
+    left(90)
+end_fill()
+right(90)
+forward(100)
+begin_fill()
+for i in range(4):
+    forward(100)
+    left(90)
+end_fill()
+right(90)
+forward(100)
+begin_fill()
+for i in range(4):
+    forward(100)
+    left(90)
+end_fill()
