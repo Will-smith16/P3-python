@@ -1,0 +1,90 @@
+# sujet 2 EX 1
+
+def moyenne(donnees):
+    somme_notes = 0
+    somme_coefficients = 0
+    for d in donnees:
+        note = d[0]
+        coefficient = d[1]
+        somme_notes += note*coefficient
+        somme_coefficients += coefficient
+    return somme_notes/somme_coefficients
+
+# sujet 5 EX 1
+
+def rechercheMinMax(tab):
+    minimum = None  
+    maximum = None  
+    for el in tab:  
+        if not minimum or el < minimum:  
+            minimum = el  
+        if not maximum or el > maximum:  
+            maximum = el  
+    return {'min': minimum, 'max': maximum}
+
+# sujet 7 EXA 1
+
+def conv_bin(n):
+    b = []
+    while n != 0: 
+        b = [n % 2] + b  
+        n = n // 2  
+    return b, len(b)
+
+# sujet 8 EX 1
+
+def recherche(elt, tab):
+    for i in range(len(tab)):  
+        if tab[i] == elt:  
+            return i  
+    return -1  
+
+# sujet 10 EX 1
+
+def occurence_lettres(phrase):
+    dic = {} 
+    for car in phrase:  
+        if car not in dic:  
+            dic[car] = 1  
+        else:
+            dic[car] += 1 
+    return dic  
+
+# sujet 11 EX 1
+
+def recherche(tab, n):
+    deb = 0  
+    fin = len(tab) - 1  
+    while deb <= fin: 
+        milieu = (fin + deb) // 2  
+        if tab[milieu] == n:  
+            return milieu  
+        else:
+            if n < tab[milieu]:  
+                fin = milieu - 1  
+            else:  
+                deb = milieu + 1  
+    return -1
+
+# sujet 13 EX 1
+
+def rendu(somme_a_rendre):
+    rend = [0, 0, 0]  
+    rend[0] = somme_a_rendre // 5  
+    somme_a_rendre = somme_a_rendre % 5  
+    rend[1] = somme_a_rendre // 2  
+    somme_a_rendre = somme_a_rendre % 2
+    rend[2] = somme_a_rendre // 1  
+    return rend
+
+# sujet 19 EX 1
+
+def multiplication(n1, n2):
+    produit = 0  
+    signe = 1  
+    if n1 < 0:  
+        signe = -1  
+        n1 = -n1  
+    for _ in range(n1):  
+        produit += n2  
+    return signe * produit
