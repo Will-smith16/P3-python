@@ -22,7 +22,7 @@ def rechercheMinMax(tab):
             maximum = el  
     return {'min': minimum, 'max': maximum}
 
-# sujet 7 EXA 1
+# sujet 7 EX 1
 
 def conv_bin(n):
     b = []
@@ -80,11 +80,76 @@ def rendu(somme_a_rendre):
 # sujet 19 EX 1
 
 def multiplication(n1, n2):
-    produit = 0  
-    signe = 1  
-    if n1 < 0:  
-        signe = -1  
-        n1 = -n1  
-    for _ in range(n1):  
-        produit += n2  
-    return signe * produit
+    res = 0
+    if n1 > 0:
+        for i in range(n1):
+            res += n2
+    elif n1 < 0:
+        for i in range(-n1):
+            res -= n2
+    return res
+
+# sujet 23 EX 1
+
+def max_dico(dico):
+    valeur_max = -1
+    for cle, valeur in dico.items():
+        if valeur > valeur_max:
+            valeur_max = valeur
+            cle_max = cle
+    return cle_max, valeur_max
+
+# sujet 25 EX 1
+
+def selection_enclos(animaux, num_enclos):
+    tab = []
+    for animal in animaux:
+        if animal[enclos] == num_enclos:
+            tab.append(animal)
+    return tab
+# Tests
+animaux = [ {'nom':'Medor','espece':'chien','age':5,'enclos':2},
+{'nom':'Titine','espece':'chat','age':2,'enclos':5},
+{'nom':'Tom','espece':'chat','age':7,'enclos':4},
+{'nom':'Belle','espece':'chien','age':6,'enclos':3},
+{'nom':'Mirza','espece':'chat','age':6,'enclos':5}]
+
+# sujet 34 EX 1
+
+def occurrence_max(ch):
+    alphabet=['a','b','c','d','e','f','g','h','i','j','k','l','m',
+              'n','o,','p','q','r','s','t','u','v','w','x','y','z']
+    occurrence = [0]*26
+    for c in ch:
+        if c in alphabet:
+            occurrence[alphabet.index(c)] += 1
+    nb_max = 0
+    for i in range(26):
+        if occurrence[i] > nb_max:
+            nb_max = occurrence[i]
+            c_max = alphabet[i]
+    return c_max
+
+
+# sujet 37 EX 1
+
+def verifie(tab):
+    for i in range(1,len(tab)):
+        if tab[i-1] > tab[i]:
+            return False
+    return True
+
+# sujet 38 EX 1
+
+def tri_selection(tab):
+    for i in range(len(tab) - 1):
+        e = tab[i]
+        mini = tab[i]
+        mini_indice = i
+        for j in range(i + 1, len(tab)):
+            if tab[j] < mini:
+                mini = tab[j]
+                mini_indice = j
+        tab[i] = tab[mini_indice]
+        tab[mini_indice] = e
+    return tab
